@@ -13,9 +13,6 @@ class view{
         console.log(`${name} html`)
         const file = await Deno.open(fromFileUrl(u));
     
-        // ctx.response.body= 
-
-        // const Rdn = await dejs.renderFileToString(`${cwd()}/res/view/${name}.ejs`,{BaseURL:ctx.request.url.origin,data:params})
         return  ctx.response.body=readableStreamFromReader(file)
     }
 }
